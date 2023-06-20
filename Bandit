@@ -44,8 +44,40 @@ PAROLA: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
 LEVEL_6: ssh bandit6@bandit.labs.overthewire.org -p 2220 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 
+ls -la
+find / -type f -user bandit7 -group bandit6 -size 33c -exec cat {} \; 2>/dev/null
+PAROLA: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 
+LEVEL_7: ssh bandit7@bandit.labs.overthewire.org -p 2220 z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 
+ls -la
+cat data.txt | egrep "millionth"
+PAROLA: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 
+LEVEL_8: ssh bandit8@bandit.labs.overthewire.org -p 2220 TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+ls -la
+sort data.txt | uniq -u
+PAROLA: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+LEVEL_9: ssh bandit9@bandit.labs.overthewire.org -p 2220 EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+ls -la
+strings data.txt | egrep =
+PAROLA: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+LEVEL_10: ssh bandit10@bandit.labs.overthewire.org -p 2220 G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+ls -la
+base64 -d data.txt
+PAROLA: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+LEVEL_11: ssh bandit11@bandit.labs.overthewire.org -p 2220 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+ls -la 
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+PAROLA: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+LEVEL_12: ssh bandit11@bandit.labs.overthewire.org -p 2220 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
 
