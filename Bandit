@@ -1,1 +1,51 @@
+LEVEL_0: ssh bandit0@bandit.labs.overthewire.org -p 2220 bandit0
+
+ls -la -> vedem toate procesele
+cat readme
+PAROLA: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+LEVEL_1: ssh bandit0@bandit.labs.overthewire.org -p 2220 NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+ls -la
+cat ./-
+PAROLA: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+LEVEL_2: ssh bandit2@bandit.labs.overthewire.org -p 2220 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+ls -la
+cat spaces\ in\ this\ filename 
+PAROLA: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+LEVEL_3: ssh bandit3@bandit.labs.overthewire.org -p 2220 aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+ls -la
+cd inhere
+ls -la
+cat .hidden
+PAROLA: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+LEVEL_4: ssh bandit4@bandit.labs.overthewire.org -p 2220 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+ls -la
+cd inhere
+ls -la
+find . -type f | xargs file (pentru a vedea tipul de date din fisiere)
+cat ./-file07
+PAROLA: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+LEVEL_5: ssh bandit5@bandit.labs.overthewire.org -p 2220 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+ls -la
+cd inhere
+ls -la
+find . -type f -size 1033c
+cat ./maybehere07/.file2
+PAROLA: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+LEVEL_6: ssh bandit6@bandit.labs.overthewire.org -p 2220 P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+
+
+
+
 
