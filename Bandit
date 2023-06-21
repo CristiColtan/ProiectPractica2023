@@ -151,7 +151,9 @@ PAROLA: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
 
 LEVEL_18: ssh -i key bandit18@bandit.labs.overthewire.org -p 2220 hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
 
-ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh
+ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme"
+PAROLA: awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
 
 
 
