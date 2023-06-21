@@ -78,6 +78,89 @@ ls -la
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 PAROLA: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
-LEVEL_12: ssh bandit11@bandit.labs.overthewire.org -p 2220 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+LEVEL_12: ssh bandit12@bandit.labs.overthewire.org -p 2220 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+ls -la
+cd /tmp
+mkdir cristi
+cd
+cp data.txt /tmp/cristi/data.txt
+cd /tmp/cristi
+xxd -r data.txt dataxxd.txt
+file dataxxd.txt -> observam ca este comprimat gzip
+mv dataxxd.txt data2.bin.gz
+gunzip data2.bin.gz
+file data2.bin
+mv data2.bin data2.bin.bz2
+bunzip2 data2.bin.bz2
+file data2.bin
+mv data2.bin data4.bin.gz
+gunzip data4.bin.gz
+file data4.bin
+mv data4.bin data5.bin.tar
+tar -xf data5.bin.tar
+file data5.bin
+mv data5.bin data6.bin.tar
+tar -xf data6.bin.tar
+file data6.bin
+mv data6.bin data6.bin.bz2
+bunzip2 data6.bin.bz2
+file data6.bin
+mv data6.bin data7.bin.tar
+tar -xf data7.bin.tar
+file data8.bin
+mv data8.bin data8.bin.gz
+gunzip data8.bin.gz
+file data8.bin
+cat data8.bin
+PAROLA: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+
+LEVEL_13: ssh bandit13@bandit.labs.overthewire.org -p 2220 wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+
+ls -la
+cat sshkey.private
+ssh -i sshkey.private bandit14@localhost -p 2220
+cat /etc/bandit_pass/bandit14
+PAROLA: fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+LEVEL_14: ssh bandit14@bandit.labs.overthewire.org -p 2220 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+nc localhost 30000 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+PAROLA: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+LEVEL_15: ssh bandit15@bandit.labs.overthewire.org -p 2220 jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+ncat --ssl localhost 30001 jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+PAROLA: JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+LEVEL_16: ssh bandit16@bandit.labs.overthewire.org -p 2220 JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+nmap localhost -p 31000-32000
+ncat --ssl localhost 31790 -> primim o cheie privata
+exit
+vim key -> copiem cheia, salvam, apoi ne conectam cu ajutorul ei
+chmod 400 key
+ssh -i key bandit17@bandit.labs.overthewire.org -p 2220
+PAROLA: VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+
+LEVEL_17: ssh -i key bandit17@bandit.labs.overthewire.org -p 2220 SAU ssh bandit16@bandit.labs.overthewire.org -p 2220 VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+
+ls -la
+diff passwords.new passwords.old
+PAROLA: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg 
+
+LEVEL_18: ssh -i key bandit18@bandit.labs.overthewire.org -p 2220 hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+
+ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh
+
+
+
+
+
+
+
+
+
+
 
 
