@@ -224,7 +224,116 @@ PAROLA: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
 
 LEVEL_25: ssh bandit25@bandit.labs.overthewire.org -p 2220 p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
 
+cat /etc/passwd | egrep bandit26
+cat /usr/bin/showtext
+ssh -i bandit26.sshkey bandit26@localhost -p 2220 -> apasam v
+->>>>
+set shell=/bin/bash
+shell
+cat /etc/bandit_pass/bandit26
+->>>>
+PAROLA: c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
 
+LEVEL_26: ssh bandit26@bandit.labs.overthewire.org -p 2220 c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+
+ls
+file bandit27-do
+./bandit27-do id
+./bandit27-do cat /etc/bandit_pass/bandit27
+PAROLA: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+
+LEVEL_27: ssh bandit27@bandit.labs.overthewire.org -p 2220 YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+
+mkdir /tmp/cristinel3
+cd /tmp/cristinel3
+echo "pas" > pass.txt
+ls
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+ls
+cd repo
+ls
+cat README
+PAROLA: AVanL161y9rsbcJIsFHuw35rjaOM19nR
+
+LEVEL_28: ssh bandit28@bandit.labs.overthewire.org -p 2220 AVanL161y9rsbcJIsFHuw35rjaOM19nR
+
+ls -la
+mkdir /tmp/cristinica
+cd /tmp/cristinica
+git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+ls
+cd repo
+ls
+cat README.md
+git log
+git log -p
+PAROLA: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+LEVEL_29: ssh bandit29@bandit.labs.overthewire.org -p 2220 tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+mkdir /tmp/cristi
+cd /tmp/cristi
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+ls
+cd repo
+ls
+cat README.md
+git log -p
+git branch
+git branch -r
+git checkout dev
+git log -p
+PAROLA: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+LEVEL_30: ssh bandit30@bandit.labs.overthewire.org -p 2220 xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+mkdir /tmp/cristi3
+cd /tmp/cristi3
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+cd repo
+ls
+cat README.md
+git log -p
+git branch -r
+git tag
+git show secret
+PAROLA: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+
+LEVEL_31: ssh bandit31@bandit.labs.overthewire.org -p 2220 OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+
+mkdir /tmp/cristi5
+cd /tmp/cristi5
+git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+ls
+cd repo
+cat README.md
+git branch
+touch key.txt
+echo "May I come in?" > key.txt 
+git add key.txt 
+ls -al
+cat .gitignore 
+rm .gitignore 
+ls -al
+git add key.txt
+git commit -m "Upload a file"
+git push origin master
+PAROLA: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+
+LEVEL_32: ssh bandit32@bandit.labs.overthewire.org -p 2220 rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+
+$0
+pwd
+ls -al
+cat /etc/bandit_pass/bandit33
+PAROLA: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+
+LEVEL_33: ssh bandit33@bandit.labs.overthewire.org -p 2220 odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+
+ls -al
+cat README.txt
+
+DONE
 
 
 
