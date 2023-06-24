@@ -17,3 +17,10 @@ users.txt
 PAROLA: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
 
 LEVEL_2: http://natas3.natas.labs.overthewire.org natas3 G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+http://natas3.natas.labs.overthewire.org/robots.txt -> /s3cr3t/
+http://natas3.natas.labs.overthewire.org/s3cr3t
+users.txt
+PAROLA: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+LEVEL_3: http://natas4.natas.labs.overthewire.org natas4 tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
