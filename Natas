@@ -11,3 +11,9 @@ LEVEL_0: http://natas1.natas.labs.overthewire.org natas1 g9D9cREhslqBKtcA2uocGHP
 PAROLA: h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
 
 LEVEL_1: http://natas2.natas.labs.overthewire.org natas2 h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
+
+http://natas2.natas.labs.overthewire.org/files/
+users.txt
+PAROLA: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
+LEVEL_2: http://natas3.natas.labs.overthewire.org natas3 G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
