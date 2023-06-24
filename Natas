@@ -2,12 +2,12 @@ LEVEL                  WEBSITE                   USERNAME PASSWORD
 
 LEVEL_0: http://natas0.natas.labs.overthewire.org natas0 natas0
 
--> Dam inspect la pagina
+Dam inspect la pagina
 PAROLA: g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
 
 LEVEL_0: http://natas1.natas.labs.overthewire.org natas1 g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
 
--> Apasam F12
+Apasam F12
 PAROLA: h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
 
 LEVEL_1: http://natas2.natas.labs.overthewire.org natas2 h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
