@@ -26,3 +26,175 @@ LEVEL_3: ssh krypton3@krypton.labs.overthewire.org -p 2231 CAESARISEASY
 
 cd /krypton/krypton3
 ls -la
+text = "CGZNL YJBEN QYDLQ ZQSUQ NZCYD SNQVU BFGBK GQUQZ QSUQN UZCYD SNJDS UDCXJ ZCYDS NZQSU QNUZB WSBNZ QSUQN UDCXJ 
+CUBGS BXJDS UCTYV SUJQG WTBUJ KCWSV LFGBK GSGZN LYJCB GJSZD GCHMS UCJCU QJLYS BXUMA UJCJM JCBGZ CYDSN CGKDC ZDSQZ DVSJJ 
+SNCGJ DSYVQ CGJSO JCUNS YVQZS WALQV SJJSN UBTSX COSWG MTASN BXYBU CJCBG UWBKG JDSQV YDQAS JXBNS OQTYV SKCJD QUDCX JBXQK 
+BMVWA SNSYV QZSWA LWAKB MVWAS ZBTSS QGWUB BGJDS TSJDB WCUGQ TSWQX JSNRM VCMUZ QSUQN KDBMU SWCJJ BZBTT MGCZQ JSKCJ DDCUE 
+SGSNQ VUJDS SGZNL YJCBG UJSYY SNXBN TSWAL QZQSU QNZCY DSNCU BXJSG CGZBN YBNQJ SWQUY QNJBX TBNSZ BTYVS OUZDS TSUUM ZDQUJ 
+DSICE SGNSZ CYDSN QGWUJ CVVDQ UTBWS NGQYY VCZQJ CBGCG JDSNB JULUJ STQUK CJDQV VUCGE VSQVY DQASJ UMAUJ CJMJC BGZCY DSNUJ 
+DSZQS UQNZC YDSNC USQUC VLANB FSGQG WCGYN QZJCZ SBXXS NUSUU SGJCQ VVLGB ZBTTM GCZQJ CBGUS ZMNCJ LUDQF SUYSQ NSYNB WMZSW 
+TBUJB XDCUF GBKGK BNFAS JKSSG QGWDC USQNV LYVQL UKSNS TQCGV LZBTS WCSUQ GWDCU JBNCS UESGN SUDSN QCUSW JBJDS YSQFB XUBYD 
+CUJCZ QJCBG QGWQN JCUJN LALJD SSGWB XJDSU COJSS GJDZS GJMNL GSOJD SKNBJ STQCG VLJNQ ESWCS UMGJC VQABM JCGZV MWCGE DQTVS 
+JFCGE VSQNQ GWTQZ ASJDZ BGUCW SNSWU BTSBX JDSXC GSUJS OQTYV SUCGJ DSSGE VCUDV QGEMQ ESCGD CUVQU JYDQU SDSKN BJSJN QECZB 
+TSWCS UQVUB FGBKG QUNBT QGZSU QGWZB VVQAB NQJSW KCJDB JDSNY VQLKN CEDJU TQGLB XDCUY VQLUK SNSYM AVCUD SWCGS WCJCB GUBXI 
+QNLCG EHMQV CJLQG WQZZM NQZLW MNCGE DCUVC XSJCT SQGWC GJKBB XDCUX BNTSN JDSQJ NCZQV ZBVVS QEMSU YMAVC UDSWJ DSXCN UJXBV 
+CBQZB VVSZJ SWSWC JCBGB XDCUW NQTQJ CZKBN FUJDQ JCGZV MWSWQ VVAMJ JKBBX JDSYV QLUGB KNSZB EGCUS WQUUD QFSUY SQNSU"
+
+letter_frequency = {}
+
+for char in text:
+    if char.isalpha():
+        char = char.upper()
+        if char in letter_frequency:
+            letter_frequency[char] += 1
+        else:
+            letter_frequency[char] = 1
+
+# Print the letter frequencies
+for letter, frequency in letter_frequency.items():
+    print(f"{letter}: {frequency}")
+
+found1          found2          found3
+C: 107          Q: 186          D: 22
+G: 81           V: 53           S: 58
+Z: 57           J: 158          N: 31
+N: 74           D: 119          M: 12
+L: 27           B: 129          Y: 9
+Y: 42           M: 45           B: 30
+J: 102          E: 34           G: 35
+B: 87           G: 111          V: 21
+E: 17           S: 243          E: 13
+Q: 106          W: 66           Q: 48
+D: 69           Z: 59           W: 16
+S: 155          N: 135          U: 27
+U: 100          U: 130          K: 12
+V: 56           X: 33           C: 34
+F: 11           Y: 33           J: 41
+K: 25           C: 86           I: 3
+X: 29           I: 14           L: 6
+W: 47           T: 37           A: 9
+T: 32           A: 26           T: 6
+H: 2            F: 12           X: 9
+M: 29           K: 30           Z: 16
+A: 20           H: 2            F: 5
+O: 7            L: 27           P: 1
+R: 1            P: 1            O: 2
+I: 2            O: 3            R: 1
+                R: 2
+
+cat krypton4 | tr "[JDSQBKVIWGYUNCXM]" "[THEAOWLVDNPSRIFU]"
+PAROLA: BRUTE
+
+
+LEVEL_4: ssh krypton4@krypton.labs.overthewire.org -p 2231 BRUTE
+
+cd /krypton/krypton4
+ls -la
+#!/bin/usr/python3
+
+# Script by Mike Rosinsky
+
+import sys
+
+key = ""
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+if __name__=="__main__":
+
+	out_string = ""
+
+	if (len(sys.argv)) != 3:
+		print("Usage: python3 vignere_decoder.py filename key")
+		exit(0)
+	else:
+
+		key = sys.argv[2]
+
+		print("Decoding file '" + sys.argv[1] + "' with key '" + sys.argv[2] + "':\n")
+
+		try:
+			with open(sys.argv[1]) as fh:
+				lines = fh.readlines()
+		except:
+			print("No file named '" + sys.argv[1] + "'")
+			exit(0)
+
+		for line in lines:
+			line = line.replace(" ", "")
+			line = line.replace("\n", "")
+			for index in range(len(line)):
+				c = alphabet[(alphabet.index(line[index]) - alphabet.index(key[index % len(key)])) % 26]
+				out_string += c
+
+	print(out_string)
+
+PAROLA: CLEARTEXT
+
+LEVEL_5: ssh krypton5@krypton.labs.overthewire.org -p 2231 CLEARTEXT
+
+cd /krypton/krypton5
+ls -la
+
+import sys
+
+if __name__=='__main__':
+	
+	rep_seq = []
+	rep_seq_spaces = []
+	tallys = [0]*20
+
+	if len(sys.argv) != 2:
+		print("Usage: python3 keyLength.py filename")
+		exit(0)
+	else:
+
+		try:
+			with open(sys.argv[1]) as fh:
+				lines = fh.readlines()
+		except:
+			print("No file named '" + sys.argv[1] + "'")
+			exit(0)
+
+		for line in lines:
+			line.replace(" ", "")
+			line.replace("\n", "")
+			for length in range(3,5+1):
+				for i in range(len(line)-length+1):
+					q = line[i:i+length]
+					for j in range(i+1,len(line)-length+1):
+						r = line[j:j+length]
+						if q == r:
+							rep_seq.append(q)
+							rep_seq_spaces.append(j-i)
+
+		for n in rep_seq_spaces:
+			for i in range(1,20):
+				if n % i == 0:
+					tallys[i] = tallys[i] + 1
+
+		s = sum(tallys)
+		if s == 0:
+			print("No repeating sequences")
+		else :
+			print("Chance key length is: ")
+			for i in range(1,len(tallys)):
+				print(str(i) + " = " + str(round((tallys[i]/s)* 100,2)) + "%")
+
+KEY: KEYLENGTH
+PAROLA: RANDOM
+
+LEVEL_6: ssh krypton6@krypton.labs.overthewire.org -p 2231 RANDOM
+
+cd /krypton/krypton6
+ls -la
+mkdir /tmp/cristinell
+ln -s /krypton/krypton6/keyfile.dat
+chmod 777 .
+/krypton/krypton6/encrypt6 tale.txt ciphertale
+xxd -b ciphertale
+xxd -b tale.txt
+PAROLA: LFSRISNOTRANDOM
+
+LEVEL_7: ssh krypton7@krypton.labs.overthewire.org -p 2231 LFSRISNOTRANDOM
+
+DONE
