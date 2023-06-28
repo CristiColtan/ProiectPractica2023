@@ -1,1 +1,82 @@
+LEVEL_0: ssh leviathan0@leviathan.labs.overthewire.org -p 2223 leviathan0
 
+ls -la
+cd ./backup
+ls -la
+grep leviathan1 bookmarks.html
+PAROLA: PPIfmI1qsA
+
+LEVEL_1: ssh leviathan1@leviathan.labs.overthewire.org -p 2223 PPIfmI1qsA
+
+ls -la
+file check
+ltrace ./check
+./check sex
+whoami
+cat /etc/leviathan_pass/leviathan2
+
+PAROLA: mEh5PNl10e
+
+LEVEL_2: ssh leviathan2@leviathan.labs.overthewire.org -p 2223 mEh5PNl10e
+
+ls -la
+file printfile
+ltrace ./printfile
+mkdir /tmp/cristinel
+cd /tmp/cristinel
+touch pass\ file.txt
+ln -s /etc/leviathan_pass/leviathan3 /tmp/cristinel/pass
+~/printfile "pass file.txt"
+PAROLA: Q0G8j4sakn
+
+LEVEL_3: ssh leviathan3@leviathan.labs.overthewire.org -p 2223 Q0G8j4sakn
+
+ls -la 
+ltrace ./level3
+./level3 snlprintf
+whoami
+cat /etc/leviathan_pass/leviathan4
+PAROLA: AgvropI4OA
+
+LEVEL_4: ssh leviathan4@leviathan.labs.overthewire.org -p 2223 AgvropI4OA
+
+ls -la
+cd ./trash
+ls -la 
+ltrace ./bin
+./bin
+PAROLA: EKKlTF1Xqs (convertim din binar)
+
+LEVEL_5: ssh leviathan5@leviathan.labs.overthewire.org -p 2223 EKKlTF1Xqs
+
+ls -la
+ltrace ./leviathan5
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+./leviathan5
+PAROLA: YZ55XPVk2l
+
+LEVEL_6: ssh leviathan6@leviathan.labs.overthewire.org -p 2223 YZ55XPVk2l
+
+ls -la
+ltrace ./leviathan6
+cd /tmp/cristinel
+vim script.sh
+
+#!/bin/bash
+
+for a in {0000..9999}
+do
+~/leviathan6 $a
+done
+
+chmod u+x script.sh
+./script.sh
+whoami
+cat /etc/leviathan_pass/leviathan7
+PAROLA: 8GpZ5f8Hze
+
+LEVEL_7: ssh leviathan7@leviathan.labs.overthewire.org -p 2223 8GpZ5f8Hze
+
+cat CONGRATULATIONS 
+
+DONE
