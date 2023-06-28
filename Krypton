@@ -1,1 +1,28 @@
+LEVEL_1: ssh krypton1@krypton.labs.overthewire.org -p 2231 KRYPTONISGREAT
 
+ls -la /krypton
+cd /krypton
+ls -la
+cd /krypton1
+ls -la
+cat krypton2
+PAROLA: ROTTEN
+
+LEVEL_2: ssh krypton2@krypton.labs.overthewire.org -p 2231 ROTTEN
+
+cd /krypton/krypton2
+ls -la
+mkdir /tmp/cristinel
+cd /tmp/cristinel
+ln -s /krypton/krypton2/keyfile.dat
+chmod 777 .
+/krypton/krypton2/encrypt /etc/issue
+cat ciphertext -> GNGZFGXFEZX
+cat /etc/issue
+cat /krypton/krypton2/krypton3 | tr "a-zA-Z" "o-za-nO-ZA-N"
+PAROLA: CAESARISEASY
+
+LEVEL_3: ssh krypton3@krypton.labs.overthewire.org -p 2231 CAESARISEASY
+
+cd /krypton/krypton3
+ls -la
